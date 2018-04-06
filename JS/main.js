@@ -2,7 +2,9 @@
 //$('.student-list')
 
 // add a <div> element with class "pagination"
-// need variable containing total length of student list
+  const $pagination = $(".page").add("<div>").addClass("pagination");
+  $("body").append($pagination);
+  // need variable containing total length of student list
 // use a for loop to loop through the student list. for every 10 students, create a new
 // button for the next page of students
 
