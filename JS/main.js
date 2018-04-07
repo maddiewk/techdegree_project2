@@ -8,7 +8,9 @@
 
 // create function to display list of 10 students
 
-function showPage(page, studentList) {
+function showPage(pageNumber, studentList) {
+  const pageNumber;
+  const studentList;
   // hide all students on the page
     $('.student-list').hide();
   // loop through all students in the student list argument
