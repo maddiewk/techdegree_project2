@@ -17,8 +17,12 @@ function showPage(pageNumber, studentList) {
   // hide all students on the page
     totalStudents.hide();
   // loop through all students in the student list argument
+  totalStudents.each(function(index, eachStudent){
+    console.log(index + "!");
 
+  })
+
+  };
     // if student should be on this page number
       // show the student
-}
 showPage();
