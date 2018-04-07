@@ -9,19 +9,18 @@
 // create function to display list of 10 students
 
 function showPage(pageNumber, studentList) {
-  // const pageNumber;
-  // const studentList;
-  // const totalStudents = $(".student-list");
-  // const eachStudent = $(".student-item");
-
+  // const allStudents = $(".student-list").children();
   // hide all students on the page
     $(".student-list").hide();
   // loop through all students in the student list argument
-  $(".student-item").each(function( index ) {
-    console.log(index + "!");
-  });
-
-  };
+  $(".student-item").each(function( index, element ) {
+    // console.log(index + ": " + $(this).text());
     // if student should be on this page number
       // show the student
+      if( index < 10 ) {
+        $(this).show();
+      }
+  });
+};
+
 showPage();
