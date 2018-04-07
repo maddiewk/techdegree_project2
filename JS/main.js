@@ -9,16 +9,16 @@
 // create function to display list of 10 students
 
 function showPage(pageNumber, studentList) {
-  const pageNumber;
-  const studentList;
+  // const pageNumber;
+  // const studentList;
+  const totalStudents = $(".student-list");
+  const eachStudent = $(".student-item");
+
   // hide all students on the page
-    $('.student-list').hide();
+    totalStudents.hide();
   // loop through all students in the student list argument
-    $('.student-list').each(function(index){
-      console.log(index + ": " + $(this).text() );
-    });
+
     // if student should be on this page number
       // show the student
-
-
 }
+showPage();
