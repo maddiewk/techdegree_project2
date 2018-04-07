@@ -17,8 +17,7 @@ function showPage(pageNumber, studentList) {
     // console.log(index + ": " + $(this).text());
     // if student should be on this page number
       // show the student
-      if( index < 10 ) {
-        $(this).show();
+      if() {
       }
   });
 };
