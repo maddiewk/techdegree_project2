@@ -11,16 +11,15 @@
 function showPage(pageNumber, studentList) {
   // const pageNumber;
   // const studentList;
-  const totalStudents = $(".student-list");
-  const eachStudent = $(".student-item");
+  // const totalStudents = $(".student-list");
+  // const eachStudent = $(".student-item");
 
   // hide all students on the page
-    totalStudents.hide();
+    $(".student-list").hide();
   // loop through all students in the student list argument
-  totalStudents.each(function(index, eachStudent){
+  $(".student-item").each(function( index ) {
     console.log(index + "!");
-
-  })
+  });
 
   };
     // if student should be on this page number
