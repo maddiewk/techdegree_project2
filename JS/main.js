@@ -1,11 +1,6 @@
-// add a <div> element with class "pagination"
-  // need variable containing total length of student list
-// use a for loop to loop through the student list. for every 10 students, create a new
-// button for the next page of students
-
 // set up variables
 const eachStudent = $(".student-item");
-const allStudents = $(".student-list");
+const allStudents = eachStudent.length;
 var pageNumber = 0;
 const studentsPerPage = 10;
 
@@ -24,24 +19,27 @@ function showPage(pageNumber) {
       }
   });
 }
+
 function appendPageLinks(studentList) {
   // determine how many pages for this student list
   var totalPages = Math.ceil(allStudents / 10);
     // create a page link section
-    const newDiv = $(".student-list").add("<div class='pagination'><ul><li>1<a></a></li></ul></div>");
-    $(".student-list").append(newDiv);
+    $(".page").append("<div class='pagination'><ul></ul></div>");
     // “for” every page
-    for ( pageNumber; pageNumber <= totalPages; pageNumber += 1 ) {
+    for ( pageNumber; pageNumber < totalPages; pageNumber += 1 ) {
       if(pageNumber == 0) {
-        $("a").addClass("active").attr("#", "href").text(pageNumber + 1);
+        $(".pagination").append("<li><a class='active' href='#'>" + (pageNumber + 1) + "</a></li>");
       } else {
-        $("a").attr("#", "href").text(pageNumber + 1);
+        $(".pagination").append("<li><a href='#'>" + (pageNumber + 1) + "</a></li>");
       }
     }
+      showPage(1);
+    $(".pagination a").click(function() {
+      $(".pagination a").removeClass("active");
+      $(this).addClass("active");
+      showPage(parseInt($(this).text()));
+    });
 
-        // add a page link to the page link section
-    // remove the old page link section from the site
-    // append our new page link section to the site
     // define what happens when you click a link
         // Use the showPage function to display the page for the link clicked
         // mark that link as “active”
