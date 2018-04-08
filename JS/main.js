@@ -23,5 +23,19 @@ function showPage(pageNumber) {
         $(this).show();
       }
   });
-};
+}
 showPage(6);
+
+function appendPageLinks() {
+  // determine how many pages for this student list
+    // create a page link section
+    // “for” every page
+        // add a page link to the page link section
+    // remove the old page link section from the site
+    // append our new page link section to the site
+    // define what happens when you click a link
+        // Use the showPage function to display the page for the link clicked
+        // mark that link as “active”
+
+
+}
