@@ -24,4 +24,4 @@ function showPage(pageNumber) {
       }
   });
 };
-showPage(1);
+showPage(6);
