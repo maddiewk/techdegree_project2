@@ -24,18 +24,21 @@ function showPage(pageNumber) {
       }
   });
 }
-showPage(1);
-
-function appendPageLinks() {
+function appendPageLinks(studentList) {
   // determine how many pages for this student list
   var totalPages = Math.ceil(allStudents / 10);
     // create a page link section
-    const div = $(".student-list").add("<div class='pagination'><ul><li></li></ul></div>");
-    allStudents.append(div);
+    const newDiv = $(".student-list").add("<div class='pagination'><ul><li>1<a></a></li></ul></div>");
+    $(".student-list").append(newDiv);
     // “for” every page
-    for ( pageNumber; pageNumber <= allStudents.length; pageNumber += 1 ) {
-      $(".pagination").add("<a href='#'></a>")
+    for ( pageNumber; pageNumber <= totalPages; pageNumber += 1 ) {
+      if(pageNumber == 0) {
+        $("a").addClass("active").attr("#", "href").text(pageNumber + 1);
+      } else {
+        $("a").attr("#", "href").text(pageNumber + 1);
+      }
     }
+
         // add a page link to the page link section
     // remove the old page link section from the site
     // append our new page link section to the site
