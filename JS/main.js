@@ -5,21 +5,23 @@
 
 // set up variables
 const eachStudent = $(".student-item");
-const pageNum = 0;
+const allStudents = $(".student-list");
+const pageNumber = 0;
 const studentsPerPage = 10;
+var totalPages = Math.ceil(allStudents / 10);
 
 // create function to display list of 10 students
 
-function showPage(pageNumber, studentList) {
+function showPage(pageNumber) {
   // hide all students on the page
     eachStudent.hide();
   // loop through all students in the student list argument
   eachStudent.each(function(index) {
     // if student should be on this page number
       // show the student
-      if() {
+      if (index >= studentsPerPage * (pageNumber - 1) && index < studentsPerPage * pageNumber) {
+        $(this).show();
       }
   });
 };
-
-showPage();
+showPage(1);
